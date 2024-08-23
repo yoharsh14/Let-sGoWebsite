@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import daisyui from 'daisyui'
+import daisyui from "daisyui";
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,6 +7,13 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: "690px",
+      md: "768px",
+      lg: "1024px",
+      desktop: "1280px",
+      mobile:"300px"
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -15,7 +22,7 @@ module.exports = {
       },
       colors: {
         navBarBg: "var(--navBarBg)",
-        matteBlack:"var(--matteBlack)",
+        matteBlack: "var(--matteBlack)",
       },
     },
   },

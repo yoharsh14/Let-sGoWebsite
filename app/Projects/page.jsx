@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Card from "./components/Card";
+import Card from "../components/Card";
 import Metaverse_p1 from "../assets/images/Project/Metaverse_p1.png";
 export default function Project({ params }) {
   return (

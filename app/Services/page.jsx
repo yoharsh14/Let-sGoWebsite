@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Card from "./components/Card";
 import Metaverse_p1 from "../assets/images/Project/Metaverse_p1.png";
 import AI from "../assets/images/service/AI.jpg";
 import app from "../assets/images/service/App.jpg";
@@ -51,26 +50,28 @@ export default function Services({ params }) {
     },
   ];
   return (
-    <div className="w-3/4 flex flex-col gap-10 items-start mt-10 mb-14 m-auto z-0">
-      {/* <div>Category:{params.category}</div>
-      <div>ProjectId:{params.projectId}</div> */}
-      <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-2 pb-4 relative">
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
-          Services
-        </span>
-      </h1>
-      <div className="flex flex-wrap gap-2 justify-around ">
+    <div className="w-[95%] h-svh flex flex-col  z-0 m-auto ">
+      <div className="overflow-y-scroll scrollable-content">
         {arr.map((el, key) => {
           return (
-            <Card
-              key={key}
-              image={el.image}
-              description={el.description}
-              title={el.ServicesName}
-              service={el.service}
-            />
+            <div className="w-full">
+              <Image
+                src={el.image}
+                alt={"Metaverse Image"}
+                width={500}
+                height={500}
+                className="rounded-2xl h-full w-full"
+              />
+            </div>
           );
         })}
+        <style>
+          {`
+          .scrollable-content::-webkit-scrollbar {
+            display: none;
+      }
+`}
+        </style>
       </div>
     </div>
   );

@@ -39,7 +39,7 @@ export default function AboutUs() {
       </div>
       <Faq />
       {/* <div className=""> */}
-      <Map/>
+      {/* <Map/> */}
       {/* </div> */}
     </div>
   );
