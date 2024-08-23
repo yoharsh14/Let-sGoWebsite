@@ -10,7 +10,7 @@ const Navbar = ({ scrollDown }) => {
   const router = useRouter();
   return (
     <div className="sticky top-0 z-50">
-      <div className="w-full bg-navBarBg flex justify-around items-center">
+      <div className="w-full bg-navBarBg backdrop-blur-sm flex justify-around items-center">
         <div>
           <Link href="/#Home">
             <Image
