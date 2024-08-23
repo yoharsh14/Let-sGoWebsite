@@ -12,10 +12,13 @@ import {
 import { FaRegBuilding } from "react-icons/fa";
 export default function Footer() {
   return (
-    <div className="bg-blue-400">
-      {/* <BackgroundVideo src="/footer.mp4" className="w-full sm:h-[460px]"> */}
-        <div className="">
-          <div className="flex justify-around items-start flex-wrap desktop:gap-20 pt-14 pb-4 container sm:text-sm sm:gap-10 mobile:gap-3 mobile:text-sm">
+    <div className="bg-white w-full">
+      <BackgroundVideo
+        src="/footer.mp4"
+        className="w-full sm:h-[460px] overflow-auto  text-black font-bold"
+      >
+        <div className="w-full">
+          <div className="flex justify-center m-auto items-start desktop:gap-20 pt-10 pb-14 container sm:text-sm sm:gap-10 mobile:pb-0 mobile:gap-[10px] mobile:text-[0.57rem]">
             <div className="flex flex-col items-start">
               <h1>TECHNOLOGY</h1>
               <Link href="#">Technologies</Link>
@@ -85,12 +88,12 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="w-full h-[1px] bg-white"></div>
-          <div className="text-center mt-10">
+          <div className="w-full h-[1px] bg-black sm:mt-14 mobile:mt-2 "></div>
+          <div className="text-center sm:text-sm mobile:text-[0.5rem]">
             Copyright © 2023 Let's Go Solutions. All Rights Reserved.
           </div>
         </div>
-      {/* </BackgroundVideo> */}
+      </BackgroundVideo>
     </div>
   );
 }

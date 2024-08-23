@@ -6,19 +6,13 @@ import ContactUs from "./ContactUs/page";
 import AboutUs from "./AboutUs/page";
 import Services from "./Services/page";
 import Navbar from "./components/navBar";
+import Figures from "./Figures/page";
 export default function Home() {
-  const scrollDown = (to) => {
-    const element = document.getElementById(to);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
   return (
-    <div>
-      <div className="sticky top-0">
-        <Navbar scrollDown={scrollDown} className="sticky top-0" />
-      </div>
-      <div className="flex flex-col">
-        <div className="bg-[radial-gradient(ellipse_at_center,#000000_40%,#090414_69%)]  text-slate-200">
-          <div>
+    <div className="no-scrollbar">
+      <div className="flex flex-col no-scrollbar">
+        <div className="bg-[radial-gradient(ellipse_at_center,#000000_40%,#090414_69%)]  text-slate-200 no-scrollbar">
+          <div id="Home">
             <LandingHomePage />
           </div>
           <div id="Services">
@@ -29,6 +23,7 @@ export default function Home() {
           </div>
           <div id="AboutUs">
             <AboutUs />
+            <Figures />
           </div>
           <div id="ContactUs">
             <ContactUs />

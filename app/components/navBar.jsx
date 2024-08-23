@@ -1,38 +1,47 @@
 // components/Dropdown.js
 "use client";
-import Link from "next/link";
-import { useState } from "react";
 import Image from "next/image";
-import clsx from "clsx";
 import logo from "../assets/images/logo/logo.png";
 import { useRouter } from "next/navigation";
 const Navbar = ({ scrollDown }) => {
   const router = useRouter();
   return (
-    <div className="sticky top-0 z-50">
-      <div className="w-full bg-navBarBg backdrop-blur-sm flex justify-around items-center">
+    <div className="fixed top-2 left-[15%] z-50 w-3/4 ">
+      <div className="bg-navBarBg backdrop-blur-md flex justify-between items-center m-auto rounded-3xl mr-10">
         <div>
-          <Link href="/#Home">
+          <button onClick={() => scrollDown("Home")} className="ml-10">
             <Image
-              className="pr-24"
-              width={200}
-              height={200}
+              className="overflow-hidden"
+              width={80}
+              height={80}
               src={logo}
               alt={`alt`}
             ></Image>
-          </Link>
+          </button>
         </div>
-        <div>
-          <button className="px-4" onClick={() => scrollDown("Services")}>
+        <div className="px-6">
+          <button
+            className="px-4 hover:text-slate-300"
+            onClick={() => scrollDown("Services")}
+          >
             Services
           </button>
-          <button className="px-4" onClick={() => scrollDown("Projects")}>
+          <button
+            className="px-4 hover:text-slate-300"
+            onClick={() => scrollDown("Projects")}
+          >
             Projects
           </button>
-          <button className="px-4" onClick={() => scrollDown("AboutUs")}>
+          <button
+            className="px-4 hover:text-slate-300"
+            onClick={() => scrollDown("AboutUs")}
+          >
             About Us
           </button>
-          <button className="px-4" onClick={() => scrollDown("ContactUs")}>
+          <button
+            className="px-4 hover:text-slate-300"
+            onClick={() => scrollDown("ContactUs")}
+          >
             Contact Us
           </button>
         </div>

@@ -30,7 +30,6 @@ export default function ContactUs() {
         message: formData.message,
       }),
     });
-    let div;
 
     if (response.status == 200) {
       setFormData({
@@ -64,11 +63,11 @@ export default function ContactUs() {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center gap-6">
+    <div className="flex flex-col justify-center items-center gap-6 p-10">
       {success && (
         <div
           role="alert"
-          className={`absolute top-10 z-50 alert alert-success flex justify-center w-1/5 transition duration-500 ease-in-out opacity-${opacity} top-0`}
+          className={`absolute top-10 z-100 alert alert-success flex justify-center w-1/5 transition duration-500 ease-in-out opacity-${opacity} top-0`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +88,7 @@ export default function ContactUs() {
       {fail && (
         <div
           role="alert"
-          className={`absolute top-10 z-50 alert alert-error flex justify-center w-1/5  transition duration-500 ease-in-out opacity-${opacity} top-0`}
+          className={`absolute top-10 z-100 alert alert-error flex justify-center w-1/5  transition duration-500 ease-in-out opacity-${opacity} top-0`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

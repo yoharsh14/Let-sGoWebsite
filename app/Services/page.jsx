@@ -50,8 +50,8 @@ export default function Services({ params }) {
     },
   ];
   return (
-    <div className="w-[95%] h-svh flex flex-col  z-0 m-auto ">
-      <div className="overflow-y-scroll scrollable-content">
+    <div className="w-[85%] h-screen flex flex-col pt-5  z-0 m-auto no-scrollbar">
+      <div className="overflow-y-scroll scrollable-content no-scrollbar">
         {arr.map((el, key) => {
           return (
             <div className="w-full">

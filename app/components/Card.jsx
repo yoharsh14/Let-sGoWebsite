@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 export default function Card(props) {
   const router = useRouter();
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <div
       className="w-[40%] bg-matteBlack container flex flex-col p-2 m-2 gap-2 rounded-3xl relative"
