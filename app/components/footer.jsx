@@ -17,7 +17,7 @@ export default function Footer() {
         src="/footer.mp4"
         className="w-full sm:h-[460px] overflow-auto  text-black font-bold"
       >
-        <div className="w-full">
+        <div className="w-full bg-footerBg backdrop-blur-md  rounded-lg p-2">
           <div className="flex justify-center m-auto items-start desktop:gap-20 pt-10 pb-14 container sm:text-sm sm:gap-10 mobile:pb-0 mobile:gap-[10px] mobile:text-[0.57rem]">
             <div className="flex flex-col items-start">
               <h1>TECHNOLOGY</h1>

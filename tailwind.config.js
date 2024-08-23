@@ -12,7 +12,7 @@ module.exports = {
       md: "768px",
       lg: "1024px",
       desktop: "1280px",
-      mobile:"300px"
+      mobile: "300px",
     },
     extend: {
       backgroundImage: {
@@ -23,6 +23,7 @@ module.exports = {
       colors: {
         navBarBg: "var(--navBarBg)",
         matteBlack: "var(--matteBlack)",
+        footerBg: "var(--footerBg)",
       },
     },
   },
