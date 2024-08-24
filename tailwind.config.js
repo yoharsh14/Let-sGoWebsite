@@ -24,6 +24,7 @@ module.exports = {
         navBarBg: "var(--navBarBg)",
         matteBlack: "var(--matteBlack)",
         footerBg: "var(--footerBg)",
+        ContactBg: "var(--ContactBg)",
       },
     },
   },

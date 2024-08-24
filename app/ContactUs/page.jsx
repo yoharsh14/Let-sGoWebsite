@@ -63,7 +63,7 @@ export default function ContactUs() {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center gap-6 p-10">
+    <div className="w-3/4 m-auto flex flex-col justify-center items-center gap-6 p-10 bg-ContactBg backdrop-blur-md ">
       {success && (
         <div
           role="alert"

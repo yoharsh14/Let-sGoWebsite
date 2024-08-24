@@ -21,13 +21,20 @@ export default function LandingHomePage() {
             </h1>
           </div>
         </div>
-        <div className="typewriter flex flex-col justify-center items-center w-3/4 m-auto mb-10">
+        <div className="typewriter flex flex-col justify-center items-center w-3/4 m-auto mb-14">
           <h1>Your Vision Our Code</h1>
-          <Link href={"www.google"} className="bg-[#1fde8e] p-2 px-4 rounded-2xl font-extrabold text-slate-800">Let's Connect</Link>
+          <Link
+            href={"www.google"}
+            className="bg-[#1fde8e] p-2 px-4 rounded-2xl font-extrabold text-slate-800"
+          >
+            Let's Connect
+          </Link>
         </div>
       </BackgroundVideo>
-      <div className="text-center py-4 shine text-2xl font-bold">Brand That Trust Us</div>
+      <div className="text-center py-4 shine text-2xl font-bold">
+        {/* Brand That Trust Us */}
       <TempSlider />
+      </div>
     </div>
   );
 }

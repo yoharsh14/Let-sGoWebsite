@@ -6,6 +6,7 @@ export async function POST(req) {
   await dbConnect();
   try {
     const body = await req.json();
+    console.log(body);
     const newContact = new Contact(body);
     await newContact.save();
     return new NextResponse(
