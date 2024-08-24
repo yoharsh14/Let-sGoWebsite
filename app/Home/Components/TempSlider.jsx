@@ -1,45 +1,41 @@
 // pages/index.js
 "use client";
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import { jsx } from "react/jsx-runtime";
+import "./TempSlider.css";
 export default function TempSlider() {
   const images = [
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/amazon.png",
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/bloomberg.png",
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/amazon.png",
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/dot_pe.png",
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/facebook.png",
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/google.png",
-];
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentIndex((currentIndex + 1) % images.length);
-    }, 1000); // Adjust interval time as needed
-
-    return () => clearInterval(intervalId);
-  }, [currentIndex]);
+    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/amazon.png",
+    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/bloomberg.png",
+    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/dot_pe.png",
+    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/facebook.png",
+    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/google.png",
+  ];
 
   return (
-    <div className="">
-      <div className="flex justify-center">
-        <Image
-          width="200"
-          height="250"
-          className="w-2 h-2 rounded-md"
-          style={{
-            color: "transparent",
-            objectFit: "contain",
-            aspectRatio: "16 / 9",
-            width: "15%",
-            height: "15%",
-            padding: "20px 20px",
-          }}
-          src={images[currentIndex]}
-          alt={`Image ${currentIndex + 1}`}
-        />
+    <div className="w-full flex justify-center">
+      <div
+        className="scroller"
+        data-direction="right"
+        data-animated="true"
+        data-speed="slow"
+      >
+        <div className="scroller__inner">
+          {images.map((el, index) => (
+            <img
+              loading="lazy"
+              width="450"
+              height="450"
+              decoding="async"
+              data-nimg="1"
+              className="w-full h-full rounded-md"
+              src={el}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 "use client";
 export default function Figures() {
   return (
-    <div className="w-full flex flex-col justify-center items-center">
+    <div className="w-full flex flex-col justify-center items-center pt-5">
       <div>Figures And Numbers</div>
       <div className="flex w-[70%] h-[1000px] rounded-xl justify-between">
         <div className="flex flex-col w-[30%] h-full gap-4 ">
