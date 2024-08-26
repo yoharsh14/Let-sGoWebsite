@@ -16,7 +16,7 @@ export default function Home() {
             <LandingHomePage />
           </div>
           <div id="Services">
-            <Services />
+            <Services className="mt-28" />
           </div>
           <div id="Projects">
             <Project />

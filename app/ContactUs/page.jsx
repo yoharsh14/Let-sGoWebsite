@@ -1,5 +1,14 @@
 "use client";
 import { cloneElement, useState } from "react";
+import {
+  CiMobile1,
+  CiMail,
+  CiLinkedin,
+  CiTwitter,
+  CiFacebook,
+  CiInstagram,
+} from "react-icons/ci";
+import { FaRegBuilding } from "react-icons/fa";
 export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
@@ -63,7 +72,7 @@ export default function ContactUs() {
   ];
 
   return (
-    <div className="w-3/4 m-auto flex flex-col justify-center items-center gap-6 p-10 bg-ContactBg backdrop-blur-md ">
+    <div className="w-[70%] m-auto flex justify-center items-center gap-6 my-10 bg-ContactBg backdrop-blur-md py-4 rounded-xl">
       {success && (
         <div
           role="alert"
@@ -106,7 +115,35 @@ export default function ContactUs() {
           <span>Failed To Submit.</span>
         </div>
       )}
-      <div className="text-5xl font-extrabold dark:text-white">Contact Us</div>
+      <div className="text-md font-extrabold h-full w-1/2 dark:text-white flex flex-col justify-around items-center gap-8">
+        <div className="text-xl">Get in Touch</div>
+        <div className="flex flex-col justify-around items-start gap-3 text-black bg-slate-300 p-4">
+          <div className="flex justify-around w-full p-2">
+            <a href="">
+              <CiLinkedin />
+            </a>
+            <a href="">
+              <CiFacebook />
+            </a>
+            <a href="">
+              <CiInstagram />
+            </a>
+            <a href="">
+              <CiTwitter />
+            </a>
+          </div>
+          <h1>CONTACT US</h1>
+          <div className="flex  items-center justify-center gap-2">
+            <CiMobile1 /> <b>+91-9650021057</b>
+          </div>
+          <div className="flex  items-center justify-center gap-2">
+            <CiMail /> <b>sales@letsgoSolutions.com</b>
+          </div>
+          <div className="flex  items-center justify-center gap-2">
+            <FaRegBuilding /> <b>Delhi, cyber city, gurugram</b>
+          </div>
+        </div>
+      </div>
       <form onSubmit={onSubmitHandler} className="flex flex-col gap-5">
         <div>
           <label htmlFor="name">Name: </label>
@@ -149,7 +186,7 @@ export default function ContactUs() {
           </select>
         </div>
         <div>
-          <label htmlFor="phone">Phone Number: </label>
+          <label htmlFor="phone">Phone: </label>
           <input
             type="tel"
             id="phone"

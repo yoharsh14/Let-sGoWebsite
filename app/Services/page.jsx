@@ -5,6 +5,7 @@ import app from "../assets/images/service/App.jpg";
 import AR from "../assets/images/service/AR.jpg";
 import CRM from "../assets/images/service/CRM.jpg";
 import Blockchain from "../assets/images/service/Blockchain.jpg";
+import "./style.css";
 export default function Services({ params }) {
   const arr = [
     {
@@ -50,28 +51,28 @@ export default function Services({ params }) {
     },
   ];
   return (
-    <div className="w-[85%] h-screen flex flex-col pt-5  z-0 m-auto no-scrollbar">
-      <div className="overflow-y-scroll scrollable-content no-scrollbar">
-        {arr.map((el, key) => {
-          return (
-            <div className="w-full">
+    <div className="w-[85%] flex  z-0 m-auto  ">
+      <div className="flex flex-col ">
+        {arr.map((el) => (
+          <div className="h-svh flex flex-col justify-center m-auto ">
+            <div className="text-3xl text-center">{el.ServicesName}</div>
+            <div className="text-lg">{el.description}</div>
+          </div>
+        ))}
+      </div>
+      <div>
+        <div className="flex flex-col justify-around">
+          {arr.map((el, index) => (
+            <div className="w-full h-screen border-2 border-black flex flex-col justify-center">
               <Image
-                src={el.image}
-                alt={"Metaverse Image"}
-                width={500}
-                height={500}
-                className="rounded-2xl h-full w-full"
+                src={arr[index].image}
+                height={400}
+                width={400}
+                className="w-full"
               />
             </div>
-          );
-        })}
-        <style>
-          {`
-          .scrollable-content::-webkit-scrollbar {
-            display: none;
-      }
-`}
-        </style>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,15 +1,7 @@
 "use client";
 import Link from "next/link";
 import BackgroundVideo from "next-video/background-video";
-import {
-  CiMobile1,
-  CiMail,
-  CiLinkedin,
-  CiTwitter,
-  CiFacebook,
-  CiInstagram,
-} from "react-icons/ci";
-import { FaRegBuilding } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <div className="bg-white w-full">
@@ -58,35 +50,7 @@ export default function Footer() {
               <Link href="#">DevOps Engineering</Link>
               <Link href="#">Data Engineering</Link>
             </div>
-            <div>
-              <h1>CONNECT WITH US</h1>
-              <div className="flex flex-col justify-between gap-3">
-                <div className="flex justify-around">
-                  <a href="">
-                    <CiLinkedin />
-                  </a>
-                  <a href="">
-                    <CiFacebook />
-                  </a>
-                  <a href="">
-                    <CiInstagram />
-                  </a>
-                  <a href="">
-                    <CiTwitter />
-                  </a>
-                </div>
-                <h1>CONTACT US</h1>
-                <div className="flex  items-center justify-center gap-2">
-                  <CiMobile1 /> <b>+91-9650021057</b>
-                </div>
-                <div className="flex  items-center justify-center gap-2">
-                  <CiMail /> <b>sales@letsgoSolutions.com</b>
-                </div>
-                <div className="flex  items-center justify-center gap-2">
-                  <FaRegBuilding /> <b>Delhi, cyber city, gurugram</b>
-                </div>
-              </div>
-            </div>
+           
           </div>
           <div className="w-full h-[1px] bg-black sm:mt-14 mobile:mt-2 "></div>
           <div className="text-center sm:text-sm mobile:text-[0.5rem]">

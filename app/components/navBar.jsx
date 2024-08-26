@@ -7,9 +7,9 @@ const Navbar = ({ scrollDown }) => {
   const router = useRouter();
   return (
     <div className="fixed top-2 left-[15%] z-50 w-3/4 ">
-      <div className="bg-navBarBg backdrop-blur-md flex justify-between items-center m-auto rounded-3xl mr-10">
+      <div className="bg-navBarBg backdrop-blur-md flex justify-between items-center m-auto rounded-3xl">
         <div>
-          <button onClick={() => scrollDown("Home")} className="ml-10">
+          <button onClick={() => scrollDown("Home")} className="">
             <Image
               className="overflow-hidden"
               width={80}
