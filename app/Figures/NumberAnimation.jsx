@@ -17,11 +17,9 @@ export default function NumberAnimation({
       },
       ease: "power1.out",
       stagger: 1,
-      snap: 5,
+      snap: 10,
       scrollTrigger: {
         trigger: ".figure",
-        // start: "1px 10%",
-        // end: "+=700",
         toggleActions: "play complete none complete",
       },
     });

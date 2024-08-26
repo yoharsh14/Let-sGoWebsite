@@ -7,6 +7,7 @@ import AboutUs from "./AboutUs/page";
 import Services from "./Services/page";
 import Navbar from "./components/navBar";
 import Figures from "./Figures/page";
+import MotionSlider from "./MotionSlider/page";
 export default function Home() {
   return (
     <div className="no-scrollbar">
@@ -28,6 +29,7 @@ export default function Home() {
           <div id="ContactUs">
             <ContactUs />
           </div>
+          {/* <MotionSlider /> */}
         </div>
       </div>
       <Footer />

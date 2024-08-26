@@ -72,7 +72,7 @@ export default function ContactUs() {
   ];
 
   return (
-    <div className="w-[70%] m-auto flex justify-center items-center gap-6 my-10 bg-ContactBg backdrop-blur-md py-4 rounded-xl">
+    <div className="w-fit  m-auto flex justify-evenly items-center gap-28 px-10  py-3 mb-10 bg-ContactBg backdrop-blur-md rounded-xl">
       {success && (
         <div
           role="alert"
@@ -115,10 +115,19 @@ export default function ContactUs() {
           <span>Failed To Submit.</span>
         </div>
       )}
-      <div className="text-md font-extrabold h-full w-1/2 dark:text-white flex flex-col justify-around items-center gap-8">
-        <div className="text-xl">Get in Touch</div>
-        <div className="flex flex-col justify-around items-start gap-3 text-black bg-slate-300 p-4">
-          <div className="flex justify-around w-full p-2">
+      <div className="text-lg font-extrabold h-full w-1/2 dark:text-white flex flex-col justify-around items-center gap-3 ">
+        <div className="text-xl text-center">Get in Touch</div>
+        <div className="flex flex-col justify-around items-start gap-3 p-4">
+          <div className="flex  items-center justify-center gap-2">
+            <CiMobile1 /> <b>+91-9650021057</b>
+          </div>
+          <div className="flex  items-center justify-center gap-2">
+            <CiMail /> <b>sales@letsgoSolutions.com</b>
+          </div>
+          <div className="flex  items-center justify-center gap-2">
+            <FaRegBuilding /> <b>Delhi, cyber city, gurugram</b>
+          </div>
+          <div className="flex justify-around w-full p-2 text-3xl">
             <a href="">
               <CiLinkedin />
             </a>
@@ -132,20 +141,10 @@ export default function ContactUs() {
               <CiTwitter />
             </a>
           </div>
-          <h1>CONTACT US</h1>
-          <div className="flex  items-center justify-center gap-2">
-            <CiMobile1 /> <b>+91-9650021057</b>
-          </div>
-          <div className="flex  items-center justify-center gap-2">
-            <CiMail /> <b>sales@letsgoSolutions.com</b>
-          </div>
-          <div className="flex  items-center justify-center gap-2">
-            <FaRegBuilding /> <b>Delhi, cyber city, gurugram</b>
-          </div>
         </div>
       </div>
       <form onSubmit={onSubmitHandler} className="flex flex-col gap-5">
-        <div>
+        <div className="flex flex-col">
           <label htmlFor="name">Name: </label>
           <input
             type="text"
@@ -157,7 +156,7 @@ export default function ContactUs() {
             className="bg-matteBlack"
           />
         </div>
-        <div>
+        <div className="flex flex-col">
           <label htmlFor="email">Email: </label>
           <input
             type="email"
@@ -168,7 +167,7 @@ export default function ContactUs() {
             className="bg-matteBlack"
           />
         </div>
-        <div>
+        <div className="flex flex-col">
           <label htmlFor="extension">Extension: </label>
           <select
             name="extension"
@@ -185,7 +184,7 @@ export default function ContactUs() {
             ))}
           </select>
         </div>
-        <div>
+        <div className="flex flex-col">
           <label htmlFor="phone">Phone: </label>
           <input
             type="tel"
@@ -197,7 +196,7 @@ export default function ContactUs() {
             className="bg-matteBlack"
           />
         </div>
-        <div>
+        <div className="flex flex-col">
           <label htmlFor="message">Message: </label>
           <textarea
             id="message"
