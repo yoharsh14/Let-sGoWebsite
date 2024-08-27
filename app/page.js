@@ -19,13 +19,13 @@ export default function Home() {
           <div id="Services">
             <Services className="mt-28" />
           </div>
-          <div id="Projects">
-            <Project />
+          <div id="Projects" className="h-[50px] opacity-0">
           </div>
-          <div id="AboutUs">
+            <Project />
+          <div id="AboutUs" className="h-[70px] opacity-0">
+          </div>
             <AboutUs />
             <Figures />
-          </div>
           <div id="ContactUs">
             <ContactUs />
           </div>
