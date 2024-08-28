@@ -7,9 +7,7 @@ import p4 from "../assets/images/Project/p4.png";
 export default function Project({ params }) {
   return (
     <div className="w-3/4 flex flex-col gap-10 items-start my-10 m-auto">
-      {/* <div>Category:{params.category}</div>
-      <div>ProjectId:{params.projectId}</div> */}
-      <h1 class="text-4xl font-bold text-gray-900 leading-tight mb-2 pb-4 relative">
+      <h1 class="desktop:text-9xl md:text-8xl sm:text-7xl mobile:text-5xl font-black text-gray-900 leading-tight mb-2 pb-4 relative heading m-auto">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
           Projects
         </span>
@@ -32,6 +30,14 @@ export default function Project({ params }) {
           description={"lorem ipsum dolo rama gaku sama chika"}
         />
       </div>
+      <style>
+        {`
+        @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        .heading{
+          font-family: "Arvo", serif;
+        }
+        `}
+      </style>
     </div>
   );
 }

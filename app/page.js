@@ -10,25 +10,22 @@ import Figures from "./Figures/page";
 import MotionSlider from "./MotionSlider/page";
 export default function Home() {
   return (
-    <div className="no-scrollbar">
-      <div className="flex flex-col no-scrollbar">
-        <div className="bg-[radial-gradient(ellipse_at_center,#000000_40%,#090414_69%)]  text-slate-200 no-scrollbar">
+    <div>
+      <div className="flex flex-col">
+        <div className="bg-[radial-gradient(ellipse_at_center,#000000_40%,#090414_69%)]  text-slate-200 ">
           <div id="Home">
             <LandingHomePage />
           </div>
-          <div id="Services">
+          <div id="Services" className="h-[90px] opacity-0">
+          </div>
             <Services className="mt-28" />
-          </div>
-          <div id="Projects" className="h-[50px] opacity-0">
-          </div>
-            <Project />
-          <div id="AboutUs" className="h-[70px] opacity-0">
-          </div>
-            <AboutUs />
-            <Figures />
-          <div id="ContactUs">
-            <ContactUs />
-          </div>
+          <div id="Projects" className="h-[50px] opacity-0"></div>
+          <Project />
+          <div id="AboutUs" className="h-[70px] opacity-0"></div>
+          <AboutUs />
+          <Figures />
+          <div id="ContactUs" className="h-[120px] opacity-0"></div>
+          <ContactUs />
           {/* <MotionSlider /> */}
         </div>
       </div>

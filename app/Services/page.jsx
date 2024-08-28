@@ -1,78 +1,54 @@
 import Image from "next/image";
-import AI from "../assets/images/service/AI.jpg";
-import app from "../assets/images/service/App.jpg";
-import AR from "../assets/images/service/AR.jpg";
-import CRM from "../assets/images/service/CRM.jpg";
-import Blockchain from "../assets/images/service/Blockchain.jpg";
-import "./style.css";
+import mobilegif from "../assets/gif/mobile.gif";
+import blockchain from "../assets/gif/blockchain.gif";
+import web from "../assets/gif/web.gif";
+import design from "../assets/gif/design.gif";
+import ProjectCard from "./ProjectCard";
 export default function Services({ params }) {
   const arr = [
     {
-      ServicesName: "Web Development",
-      image: AI,
+      ServicesName: "Mobile App Development",
+      image: mobilegif,
       description:
-        "Crafting responsive, high-performance websites tailored to your business needs. App Development: Building seamless, user-centric mobile applications for Android and iOS.",
-      service: "/webDev",
-    },
-    {
-      ServicesName: "App Development",
-      image: app,
-      description:
-        " Building seamless, user-centric mobile applications for Android and iOS.",
+        " We focus on creating user-friendly mobile apps helpful in improving the operational efficiency of business and enhancing customer engagement. Our mobile app developers have excellence in the field of iOS, Android, custom mobile-first apps, bespoke web to cloud and mobile integrations, and many other domains.",
       service: "/appDev",
-    },
-    {
-      ServicesName: "AR",
-      image: AR,
-      description:
-        " Immersive augmented and virtual reality experiences that redefine user engagement.",
-      service: "/web3Dev",
-    },
-    {
-      ServicesName: "CRM",
-      image: CRM,
-      description:
-        " Custom CRM systems to streamline customer relationships and drive growth.",
-      service: "/crmDev",
-    },
-    {
-      ServicesName: "AI",
-      image: AI,
-      description:
-        "AI-powered solutions that transform data into actionable insights.",
-      service: "/aiDev",
+      flip: true,
     },
     {
       ServicesName: "Blockchain",
-      image: Blockchain,
+      image: blockchain,
       description:
-        "Secure, transparent blockchain solutions for innovative digital transactions.",
+        "Blockchain technology is rapidly reshaping business processes. The growing demand for a decentralized environment stems from a need for simpler business operations and avant-garde development. So, our team of dedicated blockchain experts proficiently meets the Blockchain demands of our clients by providing Crowdfunding Services, NFT Marketplace, as well as ICO Whitepaper Writing.",
+      service: "/aiDev",
+      flip: false,
+    },
+    {
+      ServicesName: "Web Development",
+      image: web,
+      description:
+        "Our proficient web developers create custom websites, web applications, web tools, and many more, tailored as per the needs of businesses and startups with the aim to boost business growth using the finest web technologies.",
+      service: "/aiDev",
+      flip: true,
+    },
+    {
+      ServicesName: "Design",
+      image: design,
+      description:
+        "We know that simple designs can’t work. To attract customers, we have to be unique. That’s why our creative team develops engaging content by following all essential design steps. From conceptualizing and information architecture to building visual identity and UI/UX design, our team covers everything to offer you a captivating experience.",
+      service: "/aiDev",
+      flip: false,
     },
   ];
   return (
-    // <div className="w-full  z-0 m-auto  ">
-    <div className="w-full flex flex-col justify-around h-svh overflow-auto p-2 no-scrollbar">
-      {arr.map((el, index) => (
-        <div className="w-auto relative">
-          <Image
-            src={arr[index].image}
-            height={400}
-            width={400}
-            className="w-full"
-          />
-          <div className="p-4 text-center absolute bottom-0 bg-navBarBg w-full h-1/2">
-            <div className="text-3xl">{el.ServicesName}</div>
-            <div className="text-lg">{el.description}</div>
-          </div>
-        </div>
+    <div className="w-svh flex flex-col justify-around h-full">
+      <h1 class="desktop:text-9xl md:text-8xl sm:text-7xl mobile:text-5xl font-black text-gray-900 leading-tight mb-2 pb-4 relative heading m-auto">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+          Services
+        </span>
+      </h1>
+      {arr.map((el, key) => (
+        <ProjectCard data={el} key={key} />
       ))}
-      <style>
-        {`
-            .noscroller::-webkit-scrollbar {
-    display: none;
-}`}
-      </style>
     </div>
-    // </div>
   );
 }
