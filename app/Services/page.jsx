@@ -1,160 +1,78 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import Image from "next/image";
+import AI from "../assets/images/service/AI.jpg";
+import app from "../assets/images/service/App.jpg";
+import AR from "../assets/images/service/AR.jpg";
+import CRM from "../assets/images/service/CRM.jpg";
+import Blockchain from "../assets/images/service/Blockchain.jpg";
 import "./style.css";
-import WorkItem from "./WorkItem";
-import PhotoItem from "./PhotoItem";
-
-const texts = [
-  {
-    title: "3D Character Development",
-    description:
-      "Our experienced, skilled and creative 3D artists and modellers produce visually impressive 3D characters just for your project, brand and storytelling      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
-  },
-  {
-    title: "3D Asset Development",
-    description:
-      "We develop meticulously detailed, accurate, and high-quality 3D assets that perfectly fulfil your project's visual and functional needs.  ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
-  },
-  {
-    title: "3D Environment Development",
-    description:
-      "We create deeply immersive environments that captivate your audience with ultra-realistic visuals and perfectly fit your project needs.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
-  },
-  {
-    title: "3D Hard Surface Modelling",
-    description:
-      "We create detailed 3D models of objects or structures following your specific guidelines and ensure timely delivery for uninterrupted project operations.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
-  },
-  {
-    title: "3D Animation Services",
-    description:
-      "Our client-centric approach ensures our 3D animations and meticulous rigging convey your vision accurately while captivating the audience with high-quality visuals.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg",
-  },
-  {
-    title: "3D MetaHuman Creation Services",
-    description:
-      "Get photorealistic digital humans with easy customisation, We create Metahumans for virtual productions, games, or all other applications. ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
-  },
-];
-
-const Motionslide = () => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    let workInfoItems = document.querySelectorAll(".work__photo-item");
-    workInfoItems.forEach(function (item, index) {
-      item.style.zIndex = workInfoItems.length - index;
-    });
-    gsap.set(".work__photo-item", {
-      clipPath: function () {
-        return "inset(0px 0px 0px 0px)";
-      },
-    });
-
-    const animation = gsap.to(".work__photo-item:not(:last-child)", {
-      clipPath: function () {
-        return "inset(0px 0px 100% 0px)";
-      },
-      stagger: 0.5,
-      ease: "back",
-    });
-
-    ScrollTrigger.create({
-      trigger: ".work",
-      start: "top top",
-      end: "bottom bottom",
-      animation: animation,
-      scrub: 0.1,
-    });
-  }, []);
-
+export default function Services({ params }) {
+  const arr = [
+    {
+      ServicesName: "Web Development",
+      image: AI,
+      description:
+        "Crafting responsive, high-performance websites tailored to your business needs. App Development: Building seamless, user-centric mobile applications for Android and iOS.",
+      service: "/webDev",
+    },
+    {
+      ServicesName: "App Development",
+      image: app,
+      description:
+        " Building seamless, user-centric mobile applications for Android and iOS.",
+      service: "/appDev",
+    },
+    {
+      ServicesName: "AR",
+      image: AR,
+      description:
+        " Immersive augmented and virtual reality experiences that redefine user engagement.",
+      service: "/web3Dev",
+    },
+    {
+      ServicesName: "CRM",
+      image: CRM,
+      description:
+        " Custom CRM systems to streamline customer relationships and drive growth.",
+      service: "/crmDev",
+    },
+    {
+      ServicesName: "AI",
+      image: AI,
+      description:
+        "AI-powered solutions that transform data into actionable insights.",
+      service: "/aiDev",
+    },
+    {
+      ServicesName: "Blockchain",
+      image: Blockchain,
+      description:
+        "Secure, transparent blockchain solutions for innovative digital transactions.",
+    },
+  ];
   return (
-    <div className="">
-      <div className="py-8 text-white">
-        <div className="text-content lg:w-[80%]">
-          <h1 className="py-4 text-2xl lg:text-4xl">
-            Let' Go Solutions:
-            <br />
-            One-stop Destination for all 3D Modelling services
-          </h1>
-          <p className="text-m lg:text-m">
-            No tiring search for different vendors for different services, Let's
-            Go Solutions comprehensive 3D modelling services get all you need.
-            From AR/VR and CGI to product visualisation and animation, we offer
-            complete 3D development services for every business and every
-            project. Just partner and procure.
-          </p>
+    // <div className="w-full  z-0 m-auto  ">
+    <div className="w-full flex flex-col justify-around h-svh overflow-auto p-2 no-scrollbar">
+      {arr.map((el, index) => (
+        <div className="w-auto relative">
+          <Image
+            src={arr[index].image}
+            height={400}
+            width={400}
+            className="w-full"
+          />
+          <div className="p-4 text-center absolute bottom-0 bg-navBarBg w-full h-1/2">
+            <div className="text-3xl">{el.ServicesName}</div>
+            <div className="text-lg">{el.description}</div>
+          </div>
         </div>
-      </div>
-      <div className="h-fit relative lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev3.png')] bg-fixed bg-bottom ">
-        <section className="work  hidden lg:flex flex-row justify-between">
-          <div className="work__left">
-            <div className="work__text flex flex-col items-center">
-              {texts.map((text, index) => (
-                <WorkItem
-                  key={index}
-                  title={text.title}
-                  description={text.description}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="work__right">
-            <div className="work__right-b1">
-              <div className="work__photo flex flex-col items-center">
-                <PhotoItem
-                  title="0"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20character%20development.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="1"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20assets%20development.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="2"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20envoirnment%20development.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="3"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20hardsurface%20dev.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="4"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20animation%20dev.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="5"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20metahuman%20service.jpg"
-                  }
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+      ))}
+      <style>
+        {`
+            .noscroller::-webkit-scrollbar {
+    display: none;
+}`}
+      </style>
     </div>
+    // </div>
   );
-};
-
-export default Motionslide;
+}

@@ -1,28 +1,18 @@
 "use clietn";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 export default function NumberAnimation({
   initialVaue,
   targetValue,
   duration,
 }) {
-  const numberRef = useRef(null);
-  useEffect(() => {
-    const numberElement = numberRef.current;
-    gsap.to(numberElement, {
-      duration: duration || 2,
-      innerHTML: targetValue,
-      onStart: () => {
-        numberElement.innerText = Math.round(initialVaue);
-      },
-      ease: "power1.out",
-      stagger: 1,
-      snap: 10,
-      scrollTrigger: {
-        trigger: ".figure",
-        toggleActions: "play complete none complete",
-      },
-    });
-  }, [initialVaue, targetValue, duration]);
-  return <span ref={numberRef}></span>;
+  const [value, setValue] = useState(0);
+  // useEffect(() => {
+  //   gsap.to("#number", {
+  //     innerText: 10,
+  //     duration: 20,
+  //   });
+  // }, []);
+  return <div>{targetValue}+</div>;
 }

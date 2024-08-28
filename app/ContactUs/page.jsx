@@ -61,6 +61,13 @@ export default function ContactUs() {
         setFail(false);
         setOpacity(0);
       }, "2000");
+      setFormData({
+        name: "",
+        email: "",
+        extension: "",
+        phone: "",
+        message: "",
+      });
     }
 
     // Trigger the transition

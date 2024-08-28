@@ -14,14 +14,12 @@ export default function Figures() {
             <h1>Projects</h1>
             <h1>
               <NumberAnimation initialVaue={10} targetValue={50} duration={3} />
-              +
             </h1>
           </div>
           <div className="w-full h-[40%] bg-matteBlack rounded-lg flex flex-col justify-evenly items-center overflow-hidden">
             <h1>Clients</h1>
             <h1>
               <NumberAnimation initialVaue={10} targetValue={55} duration={3} />
-              +
             </h1>
           </div>
         </div>
@@ -35,14 +33,12 @@ export default function Figures() {
                 targetValue={100}
                 duration={3}
               />
-              +
             </h1>
           </div>
           <div className="w-full h-[40%] bg-matteBlack rounded-lg flex flex-col justify-evenly items-center overflow-hidden">
             <h1>Experts</h1>
             <h1>
               <NumberAnimation initialVaue={10} targetValue={45} duration={3} />
-              +
             </h1>
           </div>
         </div>
