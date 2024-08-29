@@ -12,7 +12,7 @@ const SplashScreen = ({ finishLoading }) => {
       target: "#logo",
       delay: 0,
       scale: 1,
-      duration: 5000,
+      duration: 2000,
       easing: "linear",
     });
   };
@@ -27,7 +27,7 @@ const SplashScreen = ({ finishLoading }) => {
       className="flex h-svh justify-center items-center "
       isMounted={isMounted}
     >
-      <img src={"./splash.gif"} />
+      <img src={"./splash.webp"} />
     </div>
   );
 };
