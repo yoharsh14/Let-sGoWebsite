@@ -28,7 +28,7 @@ export default function LandingHomePage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Let's Connect
+              Let&apos;s Connect
             </a>
           </div>
         </div>

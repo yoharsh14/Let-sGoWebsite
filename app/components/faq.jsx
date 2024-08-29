@@ -4,7 +4,7 @@ export default function Faq() {
       <div className="collapse collapse-arrow bg-matteBlack">
         <input type="radio" name="my-accordion-2" />
         <div className="collapse-title text-xl font-medium">
-          1. Why Let's Go Solutions
+          1. Why Let&apos;s Go Solutions
         </div>
         <div className="collapse-content">
           <p>
@@ -109,7 +109,7 @@ export default function Faq() {
         </div>
         <div className="collapse-content">
           <p>
-            Our backend team responds to clients' demands and in case you have
+            Our backend team responds to clients&apos; demands and in case you have
             reached them for a service, you will be connected either via email,
             or a phone call.
           </p>
