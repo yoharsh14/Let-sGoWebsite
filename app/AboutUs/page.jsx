@@ -19,7 +19,7 @@ export default function AboutUs() {
           <div
             className={`desktop:text-xl md:text-lg sm:text-md mobile:text-sm font-bold dark:text-white  ps-2`}
           >
-            Welcome to Let's Go Solutions, a fast-growing software and IT
+            Welcome to Let&apos;s Go Solutions, a fast-growing software and IT
             services company based in Gurgaon Cyber City, India. Founded with
             the vision of turning innovative ideas into reality, we specialize
             in delivering cutting-edge technology solutions that drive business

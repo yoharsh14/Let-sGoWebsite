@@ -34,7 +34,7 @@ export default function Services({ params }) {
       ServicesName: "Design",
       image: design,
       description:
-        "We know that simple designs can’t work. To attract customers, we have to be unique. That’s why our creative team develops engaging content by following all essential design steps. From conceptualizing and information architecture to building visual identity and UI/UX design, our team covers everything to offer you a captivating experience.",
+        "We know that simple designs cannot work. To attract customers, we have to be unique. That’s why our creative team develops engaging content by following all essential design steps. From conceptualizing and information architecture to building visual identity and UI/UX design, our team covers everything to offer you a captivating experience.",
       service: "/aiDev",
       flip: false,
     },

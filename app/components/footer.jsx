@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
           <div className="w-full h-[1px] bg-black sm:mt-14 mobile:mt-2 "></div>
           <div className="text-center sm:text-sm mobile:text-[0.5rem]">
-            Copyright © 2023 Let's Go Solutions. All Rights Reserved.
+            Copyright © 2023 Let&apos;s Go Solutions. All Rights Reserved.
           </div>
         </div>
       </BackgroundVideo>
