@@ -1,33 +1,9 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import {useState, useRef } from "react";
 export default function Figures() {
   const elementRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (elementRef.current) {
-        const rect = elementRef.current.getBoundingClientRect();
-        const isVisible =
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <=
-            (window.innerWidth || document.documentElement.clientWidth);
-        setIsVisible(true);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    // Initial check on component mount
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   const boxcss =
     " w-full h-[40%] py-6 bg-figureBg rounded-lg flex flex-col justify-end items-center overflow-hidden border-2 border-fadedWhite";
   const numberCss =

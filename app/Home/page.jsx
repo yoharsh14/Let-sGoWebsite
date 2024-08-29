@@ -1,3 +1,4 @@
+"use client"
 import TempSlider from "./Components/TempSlider";
 import BackgroundVideo from "next-video/background-video";
 import Navbar from "../components/navBar";
