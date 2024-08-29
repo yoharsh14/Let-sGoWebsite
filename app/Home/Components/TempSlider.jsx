@@ -24,8 +24,9 @@ export default function TempSlider() {
         data-speed="slow"
       >
         <div className="scroller__inner">
-          {images.map((el, index) => (
+          {images.map((el, key) => (
             <img
+              key={key}
               loading="lazy"
               width="450"
               height="450"
