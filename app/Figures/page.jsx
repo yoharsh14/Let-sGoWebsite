@@ -43,13 +43,13 @@ export default function Figures() {
         <div className="flex flex-col w-[35%] h-full gap-4 ">
           <div className={`${boxcss} relative card`}>
             <div className={` ${!isVisible ? "novisible" : "visible"} `}>
-              <h1 className={numberCss}>30+</h1>
+              <h1 className={numberCss}>90+</h1>
               <h1 className={textCss}>Projects</h1>
             </div>
           </div>
           <div className={`${boxcss} relative card`}>
             <div className={`${!isVisible ? "novisible" : "visible"} `}>
-              <h1 className={numberCss}>100+</h1>
+              <h1 className={numberCss}>70+</h1>
               <h1 className={textCss}>Clients</h1>
             </div>
           </div>
@@ -58,13 +58,13 @@ export default function Figures() {
         <div className="w-[35%] h-full gap-4 flex flex-col justify-center items-center">
           <div className={`${boxcss} relative card`}>
             <div className={`${!isVisible ? "novisible" : "visible"}`}>
-              <h1 className={numberCss}>60+</h1>
+              <h1 className={numberCss}>98%</h1>
               <h1 className={textCss}>Retentions</h1>
             </div>
           </div>
           <div className={`${boxcss} relative card`}>
             <div className={`${!isVisible ? "novisible" : "visible"} `}>
-              <h1 className={numberCss}>100+</h1>
+              <h1 className={numberCss}>60+</h1>
               <h1 className={textCss}>Experts</h1>
             </div>
           </div>

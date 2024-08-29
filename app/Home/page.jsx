@@ -33,10 +33,12 @@ export default function LandingHomePage() {
           </div>
         </div>
       </BackgroundVideo>
-      <div className="text-center py-4 shine text-2xl font-bold">
+
+      <div className="text-center py-8 shine text-5xl font-extrabold">
         {/* Brand That Trust Us */}
-        <TempSlider />
+        <h1>Your Vision Our Code</h1>
       </div>
+      <TempSlider />
     </div>
   );
 }

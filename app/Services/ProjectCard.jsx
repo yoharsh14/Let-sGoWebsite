@@ -1,8 +1,8 @@
 import Image from "next/image";
 export default function ProjectCard({ data }) {
   const boxCss =
-    " flex desktop:flex-row md:flex mobile:flex-col justify-center items-center desktop:p-16 sm:p-8 desktop:gap-4 sm:gap-4  rounded-5xl font-black ";
-  const titleCss = "desktop:text-7xl md:text-3xl sm-2xl mobile:xl text-white";
+    " flex desktop:flex-row md:flex mobile:flex-col justify-center items-center desktop:p-16 sm:p-8 desktop:gap-4 sm:gap-4  rounded-5xl font-bold ";
+  const titleCss = "desktop:text-7xl md:text-3xl sm-2xl mobile:xl text-white mb-4";
   return (
     <div className="desktop:w-3/4 md:text-w-[85%] sm:w-full mobile:w-full m-auto p-10 mainBody">
       {data.flip ? (
@@ -14,7 +14,7 @@ export default function ProjectCard({ data }) {
               width={400}
               className="h-3/4 rounded-xl m-2"
             />
-            <div className="desktop:text-left sm:text-center">
+            <div className="desktop:text-left mobile:text-center sm:text-center ">
               <div className={titleCss}>{data.ServicesName}</div>
               <div className="text-midWhite">{data.description}</div>
             </div>
@@ -22,7 +22,7 @@ export default function ProjectCard({ data }) {
         </div>
       ) : (
         <div className={`${boxCss}`}>
-          <div className="desktop:text-right sm:text-center">
+          <div className="desktop:text-right sm:text-center mobile:text-center">
             <div className={titleCss}>{data.ServicesName}</div>
             <div className="text-midWhite">{data.description}</div>
           </div>

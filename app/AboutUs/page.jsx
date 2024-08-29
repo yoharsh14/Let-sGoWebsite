@@ -6,7 +6,7 @@ export default function AboutUs() {
   const textStyle =
     "desktop:text-xl md:text-lg sm:text-md mobile:text-sm font-bold dark:text-white  ps-2 texthide absolute";
   const boxCss =
-    " rounded-xl flex flex-col justify-center gap-3 items-center overflow-hidden border-4 border-matteBlack bg-figureBg myDiv relative";
+    " rounded-xl flex flex-col justify-center gap-3 items-center overflow-hidden border-4 border-matteBlack hover:border-0 bg-figureBg hover:bg-hoverWhyusCard myDiv relative";
   return (
     <div>
       <div className=" gradient(ellipse_at_center,#020024_40%,#0303_70%,#000000_59%)]  flex flex-col justify-center items-center gap-6 mainBody">
@@ -19,13 +19,11 @@ export default function AboutUs() {
           <div
             className={`desktop:text-xl md:text-lg sm:text-md mobile:text-sm font-bold dark:text-white  ps-2`}
           >
-            Lets go solutions is a leading name in Metaverse and Game
-            Development in India and US. With industry-leading experts on our
-            side and vast experience of working on projects of different scales,
-            we are ready to develop a business solution that lets you achieve
-            your business goals with ease. Our wide gamut of clients includes
-            Fortune 500-listers to budding start-ups with lets go solutions
-            successfully serving their business needs.
+            Welcome to Let's Go Solutions, a fast-growing software and IT
+            services company based in Gurgaon Cyber City, India. Founded with
+            the vision of turning innovative ideas into reality, we specialize
+            in delivering cutting-edge technology solutions that drive business
+            success.
           </div>
         </div>
         <div className="w-3/4 h-[800px] flex justify-center items-center m-auto gap-4 ">
@@ -110,10 +108,12 @@ to {top:100px}
   animation:movewhyus 0.7s ease-out;
   top:350px;
 }
+
 @keyframes movewhyus{
 from {top:790px}
 to {top:350px}
 }
+
 
 `}
       </style>

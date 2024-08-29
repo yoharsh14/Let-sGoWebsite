@@ -75,18 +75,21 @@ export default function ContactUs() {
   };
   const extensions = [
     ["India", "+91"],
-    ["US", "+100"],
+    ["US", "+1"],
+    ["Canada", "+1"],
+    ["Russia", "+7"],
+    ["China", "+86"],
   ];
 
   return (
-    <div className="mainBody flex flex-col items-center">
+    <div className="mainBody flex flex-col items-center ">
       <h1 class="desktop:text-9xl md:text-8xl sm:text-7xl mobile:text-5xl font-black text-gray-900 leading-tight mb-2 pb-4">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
           Contact Us
         </span>
       </h1>
-      <div className="w-fit  m-auto  mb-10 bg-ContactBg backdrop-blur-md rounded-xl">
-        <div className="flex justify-evenly items-center gap-28 py-12 px-16">
+      <div className="desktop:w-1/2 sm:w-1/2 mobile:w-3/4 mb-10 bg-ContactBg backdrop-blur-md rounded-xl">
+        <div className="flex desktop:flex-row sm:flex-col mobile:flex-col justify-evenly items-center desktop:gap-28 sm:gap-16 mobile:gap-14 desktop:py-12 mobile:p-8 sm:p-10 desktop:px-16">
           {success && (
             <div
               role="alert"
@@ -129,11 +132,17 @@ export default function ContactUs() {
               <span>Failed To Submit.</span>
             </div>
           )}
-          <div className="text-lg font-extrabold h-full w-1/2 dark:text-white flex flex-col justify-around items-center gap-3 ">
-            <div className="text-xl text-center">Get in Touch</div>
-            <div className="flex flex-col justify-around items-start gap-3 p-4">
+          <div className=" h-full dark:text-white flex flex-col justify-around items-center gap-16">
+            <div className="font-bold text-center desktop:text-5xl md:text-5xl sm:text-4xl mobile:text-4xl">
+              Get in Touch
+            </div>
+            <div className="flex flex-col justify-around items-start gap-3 p-4 desktop:text-xl md:text-lg sm:text-md mobile:text-md">
               <div className="flex  items-center justify-center gap-2">
-                <CiMobile1 /> <b>+91-9650021057</b>
+                <CiMobile1 />{" "}
+                <b>
+                  +91-9650021057, <br />
+                  +91-9079136297
+                </b>
               </div>
               <div className="flex  items-center justify-center gap-2">
                 <CiMail /> <b>sales@letsgoSolutions.com</b>
@@ -167,7 +176,7 @@ export default function ContactUs() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="bg-matteBlack"
+                className="bg-matteBlack px-3 py-2 rounded-lg"
               />
             </div>
             <div className="flex flex-col">
@@ -178,7 +187,7 @@ export default function ContactUs() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="bg-matteBlack"
+                className="bg-matteBlack px-3 py-2 rounded-lg"
               />
             </div>
             <div className="flex flex-col">
@@ -188,7 +197,7 @@ export default function ContactUs() {
                 id="extension"
                 value={formData.extension}
                 onChange={handleChange}
-                className="bg-matteBlack"
+                className="bg-matteBlack px-3 py-2 rounded-lg"
               >
                 <option value="">Select Extension: </option>
                 {extensions.map((el, key) => (
@@ -207,7 +216,7 @@ export default function ContactUs() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="bg-matteBlack"
+                className="bg-matteBlack px-3 py-2 rounded-lg"
               />
             </div>
             <div className="flex flex-col">
@@ -217,7 +226,7 @@ export default function ContactUs() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="bg-matteBlack"
+                className="bg-matteBlack px-3 py-2 rounded-lg"
               ></textarea>
                
             </div>

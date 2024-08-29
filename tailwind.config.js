@@ -29,6 +29,7 @@ module.exports = {
         fadedWhite: "var(--fadedWhite)",
         projectCard: "var(--projectCard)",
         midWhite: "var(--midWhite)",
+        hoverWhyusCard: "var(--hoverWhyusCard)",
       },
     },
   },

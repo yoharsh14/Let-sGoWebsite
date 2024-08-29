@@ -7,7 +7,6 @@ import AboutUs from "./AboutUs/page";
 import Services from "./Services/page";
 import Navbar from "./components/navBar";
 import Figures from "./Figures/page";
-import MotionSlider from "./MotionSlider/page";
 export default function Home() {
   return (
     <div>
@@ -16,9 +15,8 @@ export default function Home() {
           <div id="Home">
             <LandingHomePage />
           </div>
-          <div id="Services" className="h-[90px] opacity-0">
-          </div>
-            <Services className="mt-28" />
+          <div id="Services" className="h-[90px] opacity-0"></div>
+          <Services className="mt-28" />
           <div id="Projects" className="h-[50px] opacity-0"></div>
           <Project />
           <div id="AboutUs" className="h-[70px] opacity-0"></div>
