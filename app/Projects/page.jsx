@@ -32,10 +32,10 @@ export default function Project({ params }) {
       </div>
       <style>
         {`
-        @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-        .heading{
-          font-family: "Arvo", serif;
-        }
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+      .heading{
+        font-family: "Montserrat", sans-serif;
+      }
         `}
       </style>
     </div>

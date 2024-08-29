@@ -22,12 +22,14 @@ export default function LandingHomePage() {
             </span>
           </h1>
           <div className="flex flex-col justify-center items-center w-3/4 m-auto">
-            <Link
-              href={"www.google"}
+            <a
+              href={"https://forms.gle/WyCEqgHVJoMEg6py5"}
               className="bg-[#1fde8e] px-4 py-2 rounded-2xl font-extrabold text-slate-800"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Let's Connect
-            </Link>
+            </a>
           </div>
         </div>
       </BackgroundVideo>
