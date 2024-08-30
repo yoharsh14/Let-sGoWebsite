@@ -48,11 +48,8 @@ export default function Figures() {
         <div className="flex flex-col items-center w-[35%] h-full gap-4 ">
           {col1.map((achievement, index) => {
             return (
-              <div className={`${boxcss}`}>
-                <div
-                  key={index}
-                  className="flex flex-col items-center justify-center"
-                >
+              <div key={index} className={`${boxcss}`}>
+                <div className="flex flex-col items-center justify-center">
                   <h2 className="text-white desktop:text-4xl sm:text-3xl mobile:text-2xl font-bold flex flex-row p-2">
                     {achievement.prefix}
                     <AnimatedNumbers
@@ -82,11 +79,8 @@ export default function Figures() {
         <div className="w-[35%] h-full gap-4 flex flex-col justify-center items-center">
           {col2.map((achievement, index) => {
             return (
-              <div className={`${boxcss}`}>
-                <div
-                  key={index}
-                  className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
-                >
+              <div key={index} className={`${boxcss}`}>
+                <div className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0">
                   <h2 className="text-white desktop:text-4xl sm:text-3xl  font-bold flex flex-row p-2">
                     {achievement.prefix}
                     <AnimatedNumbers
