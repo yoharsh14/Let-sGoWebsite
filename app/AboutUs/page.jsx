@@ -2,11 +2,11 @@
 import Faq from "../components/faq";
 export default function AboutUs() {
   const h1Style =
-    "desktop:text-5xl md:text-2xl sm:xl mobile:lg mobile:px-4 font-extrabold dark:text-white  title";
+    "desktop:text-5xl md:text-2xl sm:xl mobile:sm mobile:px-6 font-extrabold dark:text-white  title";
   const textStyle =
-    "desktop:text-xl md:text-lg sm:text-md mobile:text-sm font-bold dark:text-white  mobile:px-4 texthide absolute";
+    "desktop:text-lg md:text-md sm:text-sm mobile:text-[0.7rem] font-bold dark:text-white  mobile:px-4 texthide absolute";
   const boxCss =
-    " rounded-xl flex flex-col justify-center gap-3 items-center overflow-hidden border-4 border-matteBlack hover:border-0 bg-figureBg hover:bg-hoverWhyusCard myDiv relative";
+    "w-auto rounded-xl flex flex-col justify-center gap-3 items-center overflow-hidden border-4 border-matteBlack hover:border-0 bg-figureBg hover:bg-hoverWhyusCard myDiv relative";
   return (
     <div>
       <div className=" gradient(ellipse_at_center,#020024_40%,#0303_70%,#000000_59%)]  flex flex-col justify-center items-center gap-6 mainBody">
@@ -26,7 +26,7 @@ export default function AboutUs() {
             success.
           </div>
         </div>
-        <div className="w-3/4 h-[800px] flex justify-center items-center m-auto gap-4 ">
+        <div className="desktop:w-3/4 sm:w-[85%] mobile:w-full h-[800px] flex justify-center items-center m-auto gap-4 ">
           <div className="flex flex-col w-1/3 h-full gap-2">
             <div className={`${boxCss} h-1/2 `}>
               <h1 className={`${h1Style}`}>Experties</h1>
