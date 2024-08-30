@@ -2,9 +2,9 @@
 import Faq from "../components/faq";
 export default function AboutUs() {
   const h1Style =
-    "desktop:text-5xl md:text-2xl sm:xl mobile:lg font-extrabold dark:text-white  title";
+    "desktop:text-5xl md:text-2xl sm:xl mobile:lg mobile:px-4 font-extrabold dark:text-white  title";
   const textStyle =
-    "desktop:text-xl md:text-lg sm:text-md mobile:text-sm font-bold dark:text-white  ps-2 texthide absolute";
+    "desktop:text-xl md:text-lg sm:text-md mobile:text-sm font-bold dark:text-white  mobile:px-4 texthide absolute";
   const boxCss =
     " rounded-xl flex flex-col justify-center gap-3 items-center overflow-hidden border-4 border-matteBlack hover:border-0 bg-figureBg hover:bg-hoverWhyusCard myDiv relative";
   return (
@@ -45,10 +45,10 @@ export default function AboutUs() {
               </div>
             </div>
           </div>
-          <div className={`${boxCss} h-full w-1/2`}>
+          <div className={`${boxCss} h-full desktop:flex  mobile:hidden`}>
             <h1 className={`${h1Style}`}> Why Us</h1>
             <div
-              className={`desktop:text-xl md:text-lg sm:text-md mobile:text-sm font-bold dark:text-white  ps-2 absolute whyus`}
+              className={`desktop:text-xl md:text-lg sm:text-md mobile:text-sm font-bold dark:text-white ps-2 absolute whyus`}
             >
               <p>1. Personalized service for your needs. </p>
               <p>2. Collaborative approach for shared goals.</p>

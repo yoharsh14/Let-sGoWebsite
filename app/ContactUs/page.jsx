@@ -88,7 +88,7 @@ export default function ContactUs() {
           Contact Us
         </span>
       </h1>
-      <div className="desktop:w-1/2 sm:w-1/2 mobile:w-3/4 mb-10 bg-ContactBg backdrop-blur-md rounded-xl">
+      <div className="desktop:w-auto sm:w-1/2 mobile:w-3/4 mb-10 bg-ContactBg backdrop-blur-md rounded-xl">
         <div className="flex desktop:flex-row sm:flex-col mobile:flex-col justify-evenly items-center desktop:gap-28 sm:gap-16 mobile:gap-14 desktop:py-12 mobile:p-8 sm:p-10 desktop:px-16">
           {success && (
             <div

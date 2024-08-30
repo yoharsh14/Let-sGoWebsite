@@ -4,7 +4,7 @@ import blockchain from "../assets/gif/blockchain.gif";
 import web from "../assets/gif/web.gif";
 import design from "../assets/gif/design.gif";
 import ProjectCard from "./ProjectCard";
-export default function Services({ params }) {
+export default function Services() {
   const arr = [
     {
       ServicesName: "Mobile App Development",
@@ -40,7 +40,7 @@ export default function Services({ params }) {
     },
   ];
   return (
-    <div className="w-svh flex flex-col justify-around h-full">
+    <div className="flex flex-col justify-around h-full">
       <h1 class="desktop:text-9xl md:text-8xl sm:text-7xl mobile:text-5xl font-black text-gray-900 leading-tight mb-2 pb-4 relative heading m-auto">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
           Services
