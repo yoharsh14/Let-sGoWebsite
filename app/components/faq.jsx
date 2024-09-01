@@ -80,7 +80,7 @@ export default function Faq() {
         </div>
         <div className="collapse-content">
           <p>
-            Pyzen has a fixed price model for all mobile and web development
+            Lets go solutions has a fixed price model for all mobile and web development
             projects. According to our clients&apos; demands, we can charge on an
             hourly or monthly basis as well.
           </p>

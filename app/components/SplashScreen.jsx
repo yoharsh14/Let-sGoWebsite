@@ -24,7 +24,7 @@ const SplashScreen = ({ finishLoading }) => {
   }, []);
   return (
     <div
-      className="flex h-svh justify-center items-center "
+      className="flex h-svh justify-center items-center bg-black"
       isMounted={isMounted}
     >
       <img src={"./splash.webp"} />
